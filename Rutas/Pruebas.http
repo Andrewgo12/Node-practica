@@ -1,0 +1,71 @@
+### Solicitud GET a la raíz
+GET http://localhost:3500/ HTTP/1.1
+
+### Solicitud GET para obtener todos los cursos
+GET http://localhost:3500/cursos HTTP/1.1
+
+### Solicitud GET para cursos de programación
+GET http://localhost:3500/cursos/programacion HTTP/1.1
+
+### Solicitud GET para cursos de matemáticas
+GET http://localhost:3500/cursos/matematicas HTTP/1.1
+
+### Solicitud POST para agregar un curso a programación
+POST http://localhost:3500/cursos/programacion HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nombre": "Curso Avanzado de Node.js",
+    "duracion": "8 semanas",
+    "nivel": "Avanzado"
+}
+
+### Solicitud POST para agregar un curso a matemáticas
+POST http://localhost:3500/cursos/matematicas HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 4,
+    "nombre": "Cálculo Diferencial",
+    "duracion": "10 semanas",
+    "nivel": "Intermedio"
+}
+
+### Solicitud PUT para actualizar un curso de programación
+PUT http://localhost:3500/cursos/programacion HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nombre": "Curso Avanzado de Node.js - Actualizado",
+    "duracion": "10 semanas",
+    "nivel": "Avanzado"
+}
+
+### Solicitud PUT para actualizar un curso de matemáticas
+PUT http://localhost:3500/cursos/matematicas HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 4,
+    "nombre": "Cálculo Diferencial - Actualizado",
+    "duracion": "12 semanas",
+    "nivel": "Avanzado"
+}
+
+### Solicitud DELETE para eliminar un curso de programación (por ID)
+DELETE http://localhost:3500/cursos/programacion HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 3
+}
+
+### Solicitud DELETE para eliminar un curso de matemáticas (por ID)
+DELETE http://localhost:3500/cursos/matematicas HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 4
+}
